@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seojun Baek</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1">
+    <style>
+        .navbar {
+            padding-right: 400px;
+            text-align: right;
+        }
+        .navbar button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 30px;
+        }
+        .content {
+            padding: 50px 400px 50px 400px;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        #seojun {
+            float:left; width: 400px; height: 300px; padding-right: 20px;
+        }
+        @media screen and (max-width: 767px) {
+            body {width: auto}
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+            pages[i].classList.remove('active');
+            }
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="showPage('page1')">About me</button>
+        <button onclick="showPage('page2')">Interest</button>
+        <button onclick="showPage('page3')">Profile</button>
+    </div>
+    <div class="content">
+        <div id="page1" class="page active">
+            <h1>Seojun Baek</h1>
+            <h5>Sophomore of Kangwon National University</h3>
+            <hr>
+            <img id="seojun" src="https://github.com/BaekSeojun/test/assets/171332594/16a177ca-20cf-476d-afa7-7819ed5c1c18">
+            <p>I am a sophomore in the <a href="https://cse.kangwon.ac.kr/" target="_blank">Department of Computer Science and Engineering</a> at Kangwon national university. I'm studying basic content to be a programmer, such as web programming, linear algebra, data structure, Python, and so on. I want to study various fields and have extensive knowledge. Recently, I have been interested in Python and web programming. </p>
+        </div>
+        <div id="page2" class="page">
+            <h1>Interest</h1>
+            <hr>
+            <h2>Python</h2>
+            <p>Python's intuitive grammar has been appealing since I first started programming. That's why I chose Python as my introduction to programming, and it's the longest and most consistent language I've been studying. I am studying discrete mathematics and linear algebra using Python. I naturally became interested because I am using Python to apply it to various fields.</p>
+            <br>
+            <h2>Basketball</h2>
+            <p>I have played basketball as a hobby since I was in middle school. I like team sports because I like to compete and win there. The process of challenging, growing, and overcoming has had a positive impact not only in sports but also in many places in life.</p>
+        </div>
+        <div id="page3" class="page">
+            <h1>Profile</h1>
+            <hr>
+            <p>Welcome to Page 3!</p>
+        </div>
+    </div>
+</body>
+</html>
