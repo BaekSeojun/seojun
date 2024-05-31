@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Seojun Baek</title>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         html, body {
             height: 100%;
@@ -10,12 +10,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
         }
         .navbar-container {
             width: 100%;
             display: flex;
             justify-content: flex-end;
             padding: 10px 0;
+            position: absolute;
+            top: 0;
         }
         .navbar {
             display: flex;
@@ -28,6 +31,7 @@
             margin: 0 10px;
         }
         .content {
+            margin-top: 60px;
             width: 80%;
             max-width: 1200px;
         }
@@ -39,23 +43,28 @@
         }
         #seojun {
             float: left;
-            width: 400px;
-            height: 300px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
             padding-right: 20px;
         }
         @media screen and (max-width: 767px) {
-            body {
-                width: auto;
-            }
-            .content {
-                padding: auto;
+            .navbar-container {
+                justify-content: center;
+                position: static;
             }
             .navbar {
                 flex-direction: column;
-                align-items: flex-end;
+                align-items: center;
             }
             .navbar button {
-                margin: 10px 0;
+                padding: 5px 15px;
+                margin: 3px 0;
+            }
+            #seojun {
+                float: none;
+                width: 100%;
+                padding: 0;
             }
         }
     </style>
